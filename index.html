@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toolcrazy.online - AI & Tech Tools Navigation Hub</title>
+    <meta name="description" content="toolcrazy.online - Your ultimate navigation hub for AI tools, design resources, development platforms and productivity software. Discover the best tech tools in one place.">
+    <meta name="keywords" content="AI tools, tech tools, design resources, development tools, productivity software, toolcrazy">
+    <link rel="canonical" href="https://toolcrazy.online/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-green: #34C759;
+            --apple-orange: #FF9500;
+            --apple-red: #FF3B30;
+            --apple-purple: #AF52DE;
+            --apple-gray: #8E8E93;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .nav-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .category-tab {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .category-tab:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: white;
+        }
+        
+        .category-tab.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom-color: white;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .content-card:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .site-item {
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .site-item:hover {
+            background-color: #f1f5f9;
+            border-left-color: var(--apple-blue);
+            transform: translateX(4px);
+        }
+        
+        .site-title {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        
+        .site-desc {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        
+        .category-header {
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .ai-tools .category-header { border-bottom-color: var(--apple-blue); }
+        .design-tools .category-header { border-bottom-color: var(--apple-green); }
+        .dev-tools .category-header { border-bottom-color: var(--apple-orange); }
+        .productivity .category-header { border-bottom-color: var(--apple-red); }
+        .learning .category-header { border-bottom-color: var(--apple-purple); }
+        .software .category-header { border-bottom-color: var(--apple-gray); }
+        
+        .quick-access {
+            background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .quick-link {
+            display: inline-block;
+            background: white;
+            color: #475569;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+        
+        .quick-link:hover {
+            background: var(--apple-blue);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 122, 255, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-tabs {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .category-tab {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="nav-header">
+        <!-- Top Navigation Bar -->
+        <div class="border-b border-white/20">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <h1 class="text-xl font-bold">toolcrazy.online</h1>
+                        <nav class="hidden md:flex space-x-4 text-sm">
+                            <a href="#" class="text-white/80 hover:text-white transition-colors">🔍 Search</a>
+                            <a href="#" class="text-white/80 hover:text-white transition-colors">🔥 Hot Tools</a>
+                            <a href="#" class="text-white/80 hover:text-white transition-colors">📊 Rankings</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-white/80">Latest Tools</span>
+                        <span class="text-sm text-white/80">Hot List</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">AI & Tech Navigation Hub</h2>
+                <p class="text-lg text-white/90 mb-6">Your comprehensive gateway to cutting-edge AI tools and technology resources</p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="Search for AI tools, resources..." 
+                               class="search-box w-full px-4 py-3 rounded-full text-white placeholder-white/70 outline-none">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/80 hover:text-white">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Tabs -->
+            <div class="category-tabs flex justify-center space-x-2 md:space-x-4">
+                <button class="category-tab active px-4 py-2 rounded-t-lg font-medium text-sm">🤖 AI Tools</button>
+                <button class="category-tab px-4 py-2 rounded-t-lg font-medium text-sm">🎨 Design</button>
+                <button class="category-tab px-4 py-2 rounded-t-lg font-medium text-sm">💻 Development</button>
+                <button class="category-tab px-4 py-2 rounded-t-lg font-medium text-sm">⚡ Productivity</button>
+                <button class="category-tab px-4 py-2 rounded-t-lg font-medium text-sm">📚 Learning</button>
+                <button class="category-tab px-4 py-2 rounded-t-lg font-medium text-sm">🛠️ Software</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Access -->
+    <div class="container mx-auto px-4 py-6">
+        <div class="quick-access">
+            <h3 class="font-semibold text-gray-700 mb-3">🔥 Hot Picks</h3>
+            <div class="flex flex-wrap">
+                <a href="https://www.midjourneyai.ai/zh-CN" class="quick-link" target="_blank" rel="noopener">Midjourney</a>
+                <a href="https://lumalabs.ai/dream-machine" class="quick-link" target="_blank" rel="noopener">Dream Machine</a>
+                <a href="https://www.shenyandayi.com/" class="quick-link" target="_blank" rel="noopener">Deep Language</a>
+                <a href="https://huggingface.co/" class="quick-link" target="_blank" rel="noopener">Hugging Face</a>
+                <a href="https://www.cursor.com/" class="quick-link" target="_blank" rel="noopener">Cursor AI</a>
+                <a href="https://ideogram.ai/" class="quick-link" target="_blank" rel="noopener">Ideogram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- AI Tools Section -->
+            <div class="content-card ai-tools p-6">
+                <h2 class="category-header flex items-center">
+                    🤖 AI Tools & Creativity
+                </h2>
+                
+                <div class="space-y-1">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Art & Video Generation</h3>
+                        <a href="https://www.midjourneyai.ai/zh-CN" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Midjourney AI Platform</div>
+                            <div class="site-desc">Advanced AI image generation with stunning artistic results</div>
+                        </a>
+                        
+                        <a href="https://lumalabs.ai/dream-machine" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Dream Machine</div>
+                            <div class="site-desc">Revolutionary AI video generation from text prompts</div>
+                        </a>
+                        
+                        <a href="https://huggingface.co/guoyww/animatediff/tree/main" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">AnimateDiff</div>
+                            <div class="site-desc">Transform static images into dynamic animations</div>
+                        </a>
+                        
+                        <a href="https://ebsynth.pythonanywhere.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">EbSynth</div>
+                            <div class="site-desc">Video stylization and artistic transformation tool</div>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Writing & Content</h3>
+                        <a href="https://www.shenyandayi.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Deep Language Expression</div>
+                            <div class="site-desc">Intelligent Chinese writing and expression assistance</div>
+                        </a>
+                        
+                        <a href="https://copyai.cn/creationPage" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">CopyAI Marketing</div>
+                            <div class="site-desc">AI-powered marketing content and copywriting</div>
+                        </a>
+                        
+                        <a href="https://bewildcard.com/create-tips" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">WildCard AI Services</div>
+                            <div class="site-desc">Global AI service subscription and access platform</div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Audio & Music</h3>
+                        <a href="https://tianyin.music.163.com/#/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">NetEase AI Music</div>
+                            <div class="site-desc">AI-powered music creation and composition platform</div>
+                        </a>
+                        
+                        <a href="https://bgmcat.com/user" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">BGM Cat</div>
+                            <div class="site-desc">AI background music generation for content creators</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design & Creative Tools -->
+            <div class="content-card design-tools p-6">
+                <h2 class="category-header">
+                    🎨 Design & Creative Tools
+                </h2>
+                
+                <div class="space-y-1">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Online Design Editors</h3>
+                        <a href="https://www.135editor.com/beautify_editor.html" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">135 Editor</div>
+                            <div class="site-desc">Professional WeChat article formatting and design tool</div>
+                        </a>
+                        
+                        <a href="https://ideogram.ai/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Ideogram AI</div>
+                            <div class="site-desc">Advanced AI-powered graphic design and image creation</div>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Resource Hubs</h3>
+                        <a href="https://shadiao.pro/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Creative Resource Hub</div>
+                            <div class="site-desc">Comprehensive collection of design resources and tools</div>
+                        </a>
+                        
+                        <a href="https://www.addog.vip/#hot8" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Addog Marketing</div>
+                            <div class="site-desc">Marketing professionals' resource and tool navigation</div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Utility Tools</h3>
+                        <a href="https://jiandan.link/common-tools" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Simple Design Tools</div>
+                            <div class="site-desc">Collection of lightweight design and image processing tools</div>
+                        </a>
+                        
+                        <a href="https://wantwords.net/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">WantWords Dictionary</div>
+                            <div class="site-desc">Reverse dictionary for finding the perfect words</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development & Tech -->
+            <div class="content-card dev-tools p-6">
+                <h2 class="category-header">
+                    💻 Development & Tech
+                </h2>
+                
+                <div class="space-y-1">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Development Tools</h3>
+                        <a href="https://www.docker.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Docker</div>
+                            <div class="site-desc">Containerization platform for modern applications</div>
+                        </a>
+                        
+                        <a href="https://git-scm.com/downloads/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Git</div>
+                            <div class="site-desc">Distributed version control system for code management</div>
+                        </a>
+                        
+                        <a href="http://nodejs.p2hp.com/download/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Node.js</div>
+                            <div class="site-desc">JavaScript runtime for server-side development</div>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Development Platforms</h3>
+                        <a href="https://huggingface.co/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Hugging Face</div>
+                            <div class="site-desc">Leading platform for machine learning models and datasets</div>
+                        </a>
+                        
+                        <a href="https://pytorch.org/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">PyTorch</div>
+                            <div class="site-desc">Open-source machine learning framework</div>
+                        </a>
+                        
+                        <a href="https://anaconda.cloud/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Anaconda Cloud</div>
+                            <div class="site-desc">Data science platform and package management</div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Developer Communities</h3>
+                        <a href="https://www.hiascend.com/forum/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Ascend AI Forum</div>
+                            <div class="site-desc">Technical discussions and AI development community</div>
+                        </a>
+                        
+                        <a href="https://www.cursor.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Cursor AI Editor</div>
+                            <div class="site-desc">AI-powered code editor with intelligent assistance</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productivity & Efficiency -->
+            <div class="content-card productivity p-6">
+                <h2 class="category-header">
+                    ⚡ Productivity & Efficiency
+                </h2>
+                
+                <div class="space-y-1">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">File Management</h3>
+                        <a href="https://www.freedownloadmanager.org/zh/afterinstall.htm" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Free Download Manager</div>
+                            <div class="site-desc">Powerful download accelerator and manager</div>
+                        </a>
+                        
+                        <a href="https://www.ventoy.net/cn/download.html" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Ventoy</div>
+                            <div class="site-desc">Bootable USB solution for multiple ISO files</div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Open Source Projects</h3>
+                        <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Awesome Self-hosted</div>
+                            <div class="site-desc">Curated list of self-hosted software and services</div>
+                        </a>
+                        
+                        <a href="https://github.com/halo-dev/halo" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Halo Blog System</div>
+                            <div class="site-desc">Modern and powerful blog/CMS system</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Resources -->
+            <div class="content-card learning p-6">
+                <h2 class="category-header">
+                    📚 Learning & Resources
+                </h2>
+                
+                <div class="space-y-1">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Course Platforms</h3>
+                        <a href="https://www.kkdaxue.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">KK University</div>
+                            <div class="site-desc">Online learning platform with diverse courses</div>
+                        </a>
+                        
+                        <a href="https://www.aidaxue.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">AI University</div>
+                            <div class="site-desc">Specialized AI and machine learning education</div>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Knowledge Base</h3>
+                        <a href="https://zhuanlan.zhihu.com/p/644173731" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">ChatGPT Prompt Library</div>
+                            <div class="site-desc">Comprehensive collection of effective AI prompts</div>
+                        </a>
+                        
+                        <a href="https://www.yuque.com/taizhourenjia/debf71/gvxhyxrax321q9ag" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Technical Documentation</div>
+                            <div class="site-desc">In-depth technical guides and documentation</div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Library & Exam Resources</h3>
+                        <a href="https://www.zjlib.cn/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Zhejiang Library</div>
+                            <div class="site-desc">Digital library with extensive academic resources</div>
+                        </a>
+                        
+                        <a href="https://www.scpta.com.cn/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Sichuan Personnel Exam</div>
+                            <div class="site-desc">Official examination and certification platform</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System & Software -->
+            <div class="content-card software p-6">
+                <h2 class="category-header">
+                    🛠️ System & Software
+                </h2>
+                
+                <div class="space-y-1">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Clean System Downloads</h3>
+                        <a href="https://hellowindows.cn/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">HelloWindows</div>
+                            <div class="site-desc">Clean Windows system images and installation tools</div>
+                        </a>
+                        
+                        <a href="http://www.lvsexitong.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Green Systems</div>
+                            <div class="site-desc">Optimized and clean system installations</div>
+                        </a>
+                        
+                        <a href="https://www.newxitong.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">New System Win7</div>
+                            <div class="site-desc">Windows 7 clean system distributions</div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Software Repository</h3>
+                        <a href="https://next.itellyou.cn/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">MSDN I Tell You</div>
+                            <div class="site-desc">Official Microsoft software downloads and resources</div>
+                        </a>
+                        
+                        <a href="https://www.appinn.com/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Small Crowd Software</div>
+                            <div class="site-desc">Curated collection of quality software applications</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="text-gray-500 text-sm">
+                    <p>&copy; 2025 toolcrazy.online - Your ultimate tech tools navigation hub.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-box');
+        const siteItems = document.querySelectorAll('.site-item');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            siteItems.forEach(item => {
+                const title = item.querySelector('.site-title').textContent.toLowerCase();
+                const desc = item.querySelector('.site-desc').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm === '' ? 'block' : 'none';
+                }
+            });
+        });
+
+        // Smooth animations on scroll
+        const observeElements = document.querySelectorAll('.content-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        observeElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        });
