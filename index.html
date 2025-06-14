@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3EXEBP0MFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3EXEBP0MFH');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toolcrazy.online - AI & Tech Tools Navigation Hub</title>
@@ -66,37 +75,39 @@
         }
         
         .site-item {
-            padding: 12px 16px;
-            border-radius: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
             transition: all 0.2s ease;
-            border-left: 3px solid transparent;
+            border-left: 2px solid transparent;
+            margin-bottom: 2px;
         }
         
         .site-item:hover {
             background-color: #f1f5f9;
             border-left-color: var(--apple-blue);
-            transform: translateX(4px);
+            transform: translateX(2px);
         }
         
         .site-title {
             font-weight: 600;
             color: #1e293b;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
+            line-height: 1.2;
         }
         
         .site-desc {
-            font-size: 13px;
+            font-size: 12px;
             color: #64748b;
-            line-height: 1.4;
+            line-height: 1.2;
         }
         
         .category-header {
             color: #1e293b;
             font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e2e8f0;
+            font-size: 16px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e2e8f0;
         }
         
         .ai-tools .category-header { border-bottom-color: var(--apple-blue); }
@@ -234,56 +245,70 @@
                 
                 <div class="space-y-1">
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Art & Video Generation</h3>
-                        <a href="https://www.midjourneyai.ai/zh-CN" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Midjourney AI Platform</div>
-                            <div class="site-desc">Advanced AI image generation with stunning artistic results</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Leading AI Companies & Research</h3>
+                        <a href="https://openai.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">OpenAI</div>
+                            <div class="site-desc">Advanced AI models like ChatGPT and GPT-4</div>
                         </a>
-                        
-                        <a href="https://lumalabs.ai/dream-machine" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Dream Machine</div>
-                            <div class="site-desc">Revolutionary AI video generation from text prompts</div>
+                        <a href="https://deepmind.google" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Google DeepMind</div>
+                            <div class="site-desc">AI research including AlphaGo and Gemini</div>
                         </a>
-                        
-                        <a href="https://huggingface.co/guoyww/animatediff/tree/main" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">AnimateDiff</div>
-                            <div class="site-desc">Transform static images into dynamic animations</div>
+                        <a href="https://www.anthropic.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Anthropic</div>
+                            <div class="site-desc">Claude AI assistant</div>
                         </a>
-                        
-                        <a href="https://ebsynth.pythonanywhere.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">EbSynth</div>
-                            <div class="site-desc">Video stylization and artistic transformation tool</div>
+                        <a href="https://ai.meta.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Meta AI</div>
+                            <div class="site-desc">Open-source Llama series models</div>
+                        </a>
+                        <a href="https://huggingface.co" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Hugging Face</div>
+                            <div class="site-desc">Open-source AI model library and community</div>
                         </a>
                     </div>
-                    
+
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Writing & Content</h3>
-                        <a href="https://www.shenyandayi.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Deep Language Expression</div>
-                            <div class="site-desc">Intelligent Chinese writing and expression assistance</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Practical AI Tools</h3>
+                        <a href="https://chat.openai.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">ChatGPT</div>
+                            <div class="site-desc">OpenAI's conversational AI assistant</div>
                         </a>
-                        
-                        <a href="https://copyai.cn/creationPage" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">CopyAI Marketing</div>
-                            <div class="site-desc">AI-powered marketing content and copywriting</div>
+                        <a href="https://claude.ai" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Claude</div>
+                            <div class="site-desc">Anthropic's AI assistant</div>
                         </a>
-                        
-                        <a href="https://bewildcard.com/create-tips" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">WildCard AI Services</div>
-                            <div class="site-desc">Global AI service subscription and access platform</div>
+                        <a href="https://www.midjourney.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">MidJourney</div>
+                            <div class="site-desc">AI image generation platform</div>
+                        </a>
+                        <a href="https://stablediffusionweb.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Stable Diffusion</div>
+                            <div class="site-desc">Open-source AI image generation</div>
+                        </a>
+                        <a href="https://runwayml.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Runway</div>
+                            <div class="site-desc">AI video editing tool</div>
+                        </a>
+                        <a href="https://github.com/features/copilot" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">GitHub Copilot</div>
+                            <div class="site-desc">AI coding assistant</div>
                         </a>
                     </div>
-                    
+
                     <div>
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Audio & Music</h3>
-                        <a href="https://tianyin.music.163.com/#/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">NetEase AI Music</div>
-                            <div class="site-desc">AI-powered music creation and composition platform</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Learning Resources & Community</h3>
+                        <a href="https://www.kaggle.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Kaggle</div>
+                            <div class="site-desc">Data science competitions and learning platform</div>
                         </a>
-                        
-                        <a href="https://bgmcat.com/user" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">BGM Cat</div>
-                            <div class="site-desc">AI background music generation for content creators</div>
+                        <a href="https://arxiv.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">arXiv</div>
+                            <div class="site-desc">AI paper preprint platform</div>
+                        </a>
+                        <a href="https://poe.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Poe</div>
+                            <div class="site-desc">Multi-AI platform aggregator</div>
                         </a>
                     </div>
                 </div>
@@ -297,41 +322,78 @@
                 
                 <div class="space-y-1">
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Online Design Editors</h3>
-                        <a href="https://www.135editor.com/beautify_editor.html" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">135 Editor</div>
-                            <div class="site-desc">Professional WeChat article formatting and design tool</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Main Design Platforms</h3>
+                        <a href="https://www.figma.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Figma</div>
+                            <div class="site-desc">UI/UX design and collaboration tool</div>
                         </a>
-                        
-                        <a href="https://ideogram.ai/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Ideogram AI</div>
-                            <div class="site-desc">Advanced AI-powered graphic design and image creation</div>
+                        <a href="https://www.adobe.com/creativecloud.html" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Adobe Creative Cloud</div>
+                            <div class="site-desc">Professional tools like Photoshop, Illustrator, XD</div>
+                        </a>
+                        <a href="https://www.sketch.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Sketch</div>
+                            <div class="site-desc">Mac UI design tool</div>
+                        </a>
+                        <a href="https://www.canva.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Canva</div>
+                            <div class="site-desc">Online graphic design platform</div>
                         </a>
                     </div>
-                    
+
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Resource Hubs</h3>
-                        <a href="https://shadiao.pro/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Creative Resource Hub</div>
-                            <div class="site-desc">Comprehensive collection of design resources and tools</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Design Inspiration & Resources</h3>
+                        <a href="https://dribbble.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Dribbble</div>
+                            <div class="site-desc">Designer portfolio showcase</div>
                         </a>
-                        
-                        <a href="https://www.addog.vip/#hot8" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Addog Marketing</div>
-                            <div class="site-desc">Marketing professionals' resource and tool navigation</div>
+                        <a href="https://www.behance.net" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Behance</div>
+                            <div class="site-desc">Adobe's creative community</div>
+                        </a>
+                        <a href="https://www.awwwards.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Awwwards</div>
+                            <div class="site-desc">Web design inspiration</div>
                         </a>
                     </div>
-                    
-                    <div>
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Utility Tools</h3>
-                        <a href="https://jiandan.link/common-tools" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Simple Design Tools</div>
-                            <div class="site-desc">Collection of lightweight design and image processing tools</div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Free Assets & Resources</h3>
+                        <a href="https://www.freepik.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Freepik</div>
+                            <div class="site-desc">Free vectors and PSD resources</div>
                         </a>
-                        
-                        <a href="https://wantwords.net/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">WantWords Dictionary</div>
-                            <div class="site-desc">Reverse dictionary for finding the perfect words</div>
+                        <a href="https://www.pexels.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Pexels</div>
+                            <div class="site-desc">Free high-quality stock photos</div>
+                        </a>
+                        <a href="https://www.flaticon.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Flaticon</div>
+                            <div class="site-desc">Free icon resources</div>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">3D Design & Animation Tools</h3>
+                        <a href="https://www.blender.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Blender</div>
+                            <div class="site-desc">Free 3D modeling software</div>
+                        </a>
+                        <a href="https://spline.design" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Spline</div>
+                            <div class="site-desc">Online 3D design tool</div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Color & Font Tools</h3>
+                        <a href="https://coolors.co" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Coolors</div>
+                            <div class="site-desc">Color scheme generator</div>
+                        </a>
+                        <a href="https://fonts.google.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Google Fonts</div>
+                            <div class="site-desc">Free font library</div>
                         </a>
                     </div>
                 </div>
@@ -345,51 +407,70 @@
                 
                 <div class="space-y-1">
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Development Tools</h3>
-                        <a href="https://www.docker.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Docker</div>
-                            <div class="site-desc">Containerization platform for modern applications</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Main Development Tools & Platforms</h3>
+                        <a href="https://github.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">GitHub</div>
+                            <div class="site-desc">Code hosting and collaboration platform</div>
                         </a>
-                        
-                        <a href="https://git-scm.com/downloads/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Git</div>
-                            <div class="site-desc">Distributed version control system for code management</div>
+                        <a href="https://replit.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Replit</div>
+                            <div class="site-desc">Online IDE with AI coding assistant</div>
                         </a>
-                        
-                        <a href="http://nodejs.p2hp.com/download/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Node.js</div>
-                            <div class="site-desc">JavaScript runtime for server-side development</div>
+                        <a href="https://bubble.io" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Bubble</div>
+                            <div class="site-desc">No-code application development platform</div>
                         </a>
                     </div>
-                    
+
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Development Platforms</h3>
-                        <a href="https://huggingface.co/" class="site-item block" target="_blank" rel="noopener">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI Development & Automation Tools</h3>
+                        <a href="https://openai.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">OpenAI</div>
+                            <div class="site-desc">GPT models and API integration</div>
+                        </a>
+                        <a href="https://huggingface.co" class="site-item block" target="_blank" rel="noopener">
                             <div class="site-title">Hugging Face</div>
-                            <div class="site-desc">Leading platform for machine learning models and datasets</div>
+                            <div class="site-desc">AI model repository</div>
                         </a>
-                        
-                        <a href="https://pytorch.org/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">PyTorch</div>
-                            <div class="site-desc">Open-source machine learning framework</div>
-                        </a>
-                        
-                        <a href="https://anaconda.cloud/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Anaconda Cloud</div>
-                            <div class="site-desc">Data science platform and package management</div>
+                        <a href="https://github.com/features/copilot" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">GitHub Copilot</div>
+                            <div class="site-desc">AI coding assistant</div>
                         </a>
                     </div>
-                    
-                    <div>
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Developer Communities</h3>
-                        <a href="https://www.hiascend.com/forum/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Ascend AI Forum</div>
-                            <div class="site-desc">Technical discussions and AI development community</div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Tech Communities & Learning</h3>
+                        <a href="https://stackoverflow.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Stack Overflow</div>
+                            <div class="site-desc">Technical Q&A community</div>
                         </a>
-                        
-                        <a href="https://www.cursor.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Cursor AI Editor</div>
-                            <div class="site-desc">AI-powered code editor with intelligent assistance</div>
+                        <a href="https://dev.to" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Dev.to</div>
+                            <div class="site-desc">Developer community</div>
+                        </a>
+                        <a href="https://news.ycombinator.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Hacker News</div>
+                            <div class="site-desc">Tech news and discussions</div>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Embedded & Hardware Development</h3>
+                        <a href="https://www.microchip.com/development-tools" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Microchip Tools</div>
+                            <div class="site-desc">Embedded system development tools</div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Other Useful Resources</h3>
+                        <a href="https://www.sitepoint.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">SitePoint</div>
+                            <div class="site-desc">Web development tutorials</div>
+                        </a>
+                        <a href="https://www.codeproject.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">CodeProject</div>
+                            <div class="site-desc">Programming examples and projects</div>
                         </a>
                     </div>
                 </div>
@@ -403,28 +484,62 @@
                 
                 <div class="space-y-1">
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">File Management</h3>
-                        <a href="https://www.freedownloadmanager.org/zh/afterinstall.htm" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Free Download Manager</div>
-                            <div class="site-desc">Powerful download accelerator and manager</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Task Management & Time Tracking</h3>
+                        <a href="https://www.blitzit.app" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Blitzit</div>
+                            <div class="site-desc">Focus task management + Pomodoro timer</div>
                         </a>
-                        
-                        <a href="https://www.ventoy.net/cn/download.html" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Ventoy</div>
-                            <div class="site-desc">Bootable USB solution for multiple ISO files</div>
+                        <a href="https://apps.apple.com/us/app/pomidor-productivity-helper" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Pomidor</div>
+                            <div class="site-desc">Anti-procrastination Pomodoro app with health data sync</div>
+                        </a>
+                        <a href="https://www.jibble.io" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Jibble</div>
+                            <div class="site-desc">Free productivity tracker for team time management</div>
                         </a>
                     </div>
-                    
-                    <div>
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Open Source Projects</h3>
-                        <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Awesome Self-hosted</div>
-                            <div class="site-desc">Curated list of self-hosted software and services</div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI-Powered Productivity Tools</h3>
+                        <a href="https://claude.ai" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Claude Pro</div>
+                            <div class="site-desc">AI assistant specialized in code and document processing</div>
                         </a>
-                        
-                        <a href="https://github.com/halo-dev/halo" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Halo Blog System</div>
-                            <div class="site-desc">Modern and powerful blog/CMS system</div>
+                        <a href="https://github.com/features/copilot" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">GitHub Copilot</div>
+                            <div class="site-desc">AI coding assistant to boost development efficiency</div>
+                        </a>
+                        <a href="https://www.magicflow.app" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Magicflow</div>
+                            <div class="site-desc">AI productivity coach providing focus optimization</div>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Team Collaboration & Office Suites</h3>
+                        <a href="https://www.notion.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Notion</div>
+                            <div class="site-desc">All-in-one workspace with rich templates</div>
+                        </a>
+                        <a href="https://workspace.google.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Google Workspace</div>
+                            <div class="site-desc">Enterprise collaboration tool suite</div>
+                        </a>
+                        <a href="https://online.visual-paradigm.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Visual Paradigm</div>
+                            <div class="site-desc">Online office suite with diagramming</div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Other Productivity Tools</h3>
+                        <a href="https://1password.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">1Password</div>
+                            <div class="site-desc">Password and sensitive information manager</div>
+                        </a>
+                        <a href="https://kagi.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Kagi</div>
+                            <div class="site-desc">Ad-free search engine to reduce information noise</div>
                         </a>
                     </div>
                 </div>
@@ -438,41 +553,62 @@
                 
                 <div class="space-y-1">
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Course Platforms</h3>
-                        <a href="https://www.kkdaxue.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">KK University</div>
-                            <div class="site-desc">Online learning platform with diverse courses</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Language Learning Resources</h3>
+                        <a href="https://language.nhri.org.tw/course.php" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">NHRI Language Center</div>
+                            <div class="site-desc">Multilingual courses for beginners</div>
                         </a>
-                        
-                        <a href="https://www.aidaxue.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">AI University</div>
-                            <div class="site-desc">Specialized AI and machine learning education</div>
+                        <a href="https://www.bbc.co.uk/bitesize" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">BBC Bitesize</div>
+                            <div class="site-desc">UK school curriculum resources</div>
+                        </a>
+                        <a href="https://quizlet.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Quizlet</div>
+                            <div class="site-desc">Flashcards and study sets</div>
                         </a>
                     </div>
-                    
+
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Knowledge Base</h3>
-                        <a href="https://zhuanlan.zhihu.com/p/644173731" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">ChatGPT Prompt Library</div>
-                            <div class="site-desc">Comprehensive collection of effective AI prompts</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">AI & Tech Learning</h3>
+                        <a href="https://www./" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Path to AGI</div>
+                            <div class="site-desc">AI learning paths and resources</div>
                         </a>
-                        
-                        <a href="https://www.yuque.com/taizhourenjia/debf71/gvxhyxrax321q9ag" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Technical Documentation</div>
-                            <div class="site-desc">In-depth technical guides and documentation</div>
+                        <a href="https://github.com/EgoAlpha/prompt-in-context-learning" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">EgoAlpha GitHub</div>
+                            <div class="site-desc">Large model technology community</div>
+                        </a>
+                        <a href="https://www.kaggle.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Kaggle</div>
+                            <div class="site-desc">Hands-on data science and machine learning</div>
                         </a>
                     </div>
-                    
-                    <div>
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Library & Exam Resources</h3>
-                        <a href="https://www.zjlib.cn/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Zhejiang Library</div>
-                            <div class="site-desc">Digital library with extensive academic resources</div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Academic & Exam Resources</h3>
+                        <a href="https://pastpapers.co/" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Past Papers</div>
+                            <div class="site-desc">GCSE/A-Level past exam papers</div>
                         </a>
-                        
-                        <a href="https://www.scpta.com.cn/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Sichuan Personnel Exam</div>
-                            <div class="site-desc">Official examination and certification platform</div>
+                        <a href="https://www.coursera.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Coursera</div>
+                            <div class="site-desc">Free courses from top universities</div>
+                        </a>
+                        <a href="https://www.khanacademy.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Khan Academy</div>
+                            <div class="site-desc">Free educational video resources</div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Teaching & Education Tools</h3>
+                        <a href="https://monsha.ai/tools/supplementary-materials-finder" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Monsha AI</div>
+                            <div class="site-desc">Teaching resource finder</div>
+                        </a>
+                        <a href="https://senecalearning.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Seneca Learning</div>
+                            <div class="site-desc">Interactive learning platform</div>
                         </a>
                     </div>
                 </div>
@@ -486,33 +622,62 @@
                 
                 <div class="space-y-1">
                     <div class="mb-4">
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Clean System Downloads</h3>
-                        <a href="https://hellowindows.cn/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">HelloWindows</div>
-                            <div class="site-desc">Clean Windows system images and installation tools</div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Operating Systems & Development</h3>
+                        <a href="https://www.kernel.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Linux Kernel</div>
+                            <div class="site-desc">Linux kernel source code and documentation</div>
                         </a>
-                        
-                        <a href="http://www.lvsexitong.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Green Systems</div>
-                            <div class="site-desc">Optimized and clean system installations</div>
+                        <a href="https://www.freertos.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">FreeRTOS</div>
+                            <div class="site-desc">Lightweight RTOS for embedded devices</div>
                         </a>
-                        
-                        <a href="https://www.newxitong.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">New System Win7</div>
-                            <div class="site-desc">Windows 7 clean system distributions</div>
+                        <a href="https://www.zephyrproject.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Zephyr Project</div>
+                            <div class="site-desc">Modular IoT operating system</div>
                         </a>
                     </div>
-                    
-                    <div>
-                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Software Repository</h3>
-                        <a href="https://next.itellyou.cn/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">MSDN I Tell You</div>
-                            <div class="site-desc">Official Microsoft software downloads and resources</div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Software Development & Tools</h3>
+                        <a href="http://www.codeproject.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">CodeProject</div>
+                            <div class="site-desc">Code examples and tutorial resources</div>
                         </a>
-                        
-                        <a href="https://www.appinn.com/" class="site-item block" target="_blank" rel="noopener">
-                            <div class="site-title">Small Crowd Software</div>
-                            <div class="site-desc">Curated collection of quality software applications</div>
+                        <a href="https://github.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">GitHub</div>
+                            <div class="site-desc">Open-source project hosting platform</div>
+                        </a>
+                        <a href="https://stackoverflow.com" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Stack Overflow</div>
+                            <div class="site-desc">Developer Q&A community</div>
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Embedded & Hardware Development</h3>
+                        <a href="https://developer.tizen.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Tizen SDK</div>
+                            <div class="site-desc">Samsung Tizen OS development tools</div>
+                        </a>
+                        <a href="https://www.microchip.com/development-tools" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">Microchip Tools</div>
+                            <div class="site-desc">PIC/AVR MCU development environment</div>
+                        </a>
+                        <a href="http://www.directfb.org" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">DirectFB</div>
+                            <div class="site-desc">Lightweight Linux graphics framework</div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm mb-2">Security & Vulnerability Detection</h3>
+                        <a href="https://github.com/CGCL-codes/VulDeePecker" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">VulDeePecker</div>
+                            <div class="site-desc">AI-powered code vulnerability analysis tool</div>
+                        </a>
+                        <a href="https://gitee.com/cse-sss" class="site-item block" target="_blank" rel="noopener">
+                            <div class="site-title">HUST Security Team</div>
+                            <div class="site-desc">Software security and vulnerability detection research</div>
                         </a>
                     </div>
                 </div>
